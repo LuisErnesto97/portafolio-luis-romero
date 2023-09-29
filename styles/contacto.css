@@ -1,0 +1,48 @@
+#contactoTitle {
+  font-size: 50px;
+  padding-left: 30px;
+  padding-top: 120px;
+}
+.contactoContainer p {
+  padding-left: 30px;
+  font-size: 17px;
+  margin: 5px;
+}
+#galeriaContacto {
+  position: relative;
+  background: radial-gradient(
+    circle,
+    rgba(209, 206, 207, 1) 0%,
+    rgba(221, 230, 241, 1) 100%
+  );
+  margin-top: 40px;
+  padding-bottom: 50px;
+}
+#galeriaContactoTitulo {
+  padding-top: 20px;
+  padding-left: 30px;
+}
+#galeriaContacto h2 {
+  font-size: 30px;
+  font-weight: 300;
+}
+.sliderImageContacto {
+  width: auto;
+  height: auto;
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.carousel-contacto-image {
+  width: 100%;
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  height: 100%; /* Ensure the container takes the full height */
+}
+.imageTituloContacto {
+  margin: 0 auto;
+  box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px,
+    rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
+}
