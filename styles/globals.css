@@ -538,7 +538,7 @@ body {
     font-size: 20px;
     position: absolute;
     text-align: center;
-    top: 210px;
+    top: 170px;
     color: white;
     font-weight: 200;
     width: 100%;
@@ -550,7 +550,7 @@ body {
     position: absolute;
     left: 0;
     right: 0;
-    top: 210px;
+    top: 200px;
     margin-left: auto;
     margin-right: auto;
     bottom: 0px;
@@ -851,7 +851,6 @@ body {
     letter-spacing: 3px;
     text-align: center;
     z-index: 5;
-    top: 160px;
     padding-left: 15px;
     padding-right: 15px;
   }
@@ -860,7 +859,6 @@ body {
     font-size: 15px;
     position: absolute;
     text-align: center;
-    top: 210px;
     color: white;
     font-weight: 200;
     width: 100%;
