@@ -8,6 +8,7 @@ import "slick-carousel/slick/slick-theme.css";
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import TypingEffect from "@/public/TypingEffect";
+import { Fade } from "react-awesome-reveal";
 
 export default function Home() {
   const [images, setImages] = useState([
@@ -18,6 +19,7 @@ export default function Home() {
     "/imagenes/Academy.png",
     "/imagenes/Procesos.png",
   ]);
+  const [scrollPosition, setScrollPosition] = useState(0);
 
   const [color, setColor] = useState(false);
 
@@ -46,6 +48,20 @@ export default function Home() {
     };
   }, []);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollPosition(window.scrollY);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  const opacity = Math.min(1, Math.max(0, scrollPosition / 100));
+
   return (
     <>
       <Head>
@@ -65,55 +81,63 @@ export default function Home() {
           <div className="background">
             <div className={color ? "navbarScroll" : "navbar"}>
               <Link href="/">
-                <div className="briefCaseIcon">
-                  <img src="/imagenes/briefcase.png" width={60} height={60} />
-                </div>
-              </Link>
-              <div className="navbarlist">
-                <a href="">Inicio</a>
-                <a href="/contacto">Contacto</a>
-              </div>
-            </div>
-            <>
-              <TypingEffect text="Portafolio" speed={200}></TypingEffect>
-            </>
-            <div className="info">
-              <>
-                <h2>Luis Ernesto Romero</h2>
-              </>
-              <>
-                <p>Bachiller en Administración de Empresas</p>
-              </>
-              <>
-                <div className="profileImage">
-                  <div className="profileDesign">
-                    <div className="backgrounProfileImage"></div>
-                    <div className="backgroundCircle"></div>
+                <Fade direction="left">
+                  <div className="briefCaseIcon">
+                    <img src="/imagenes/briefcase.png" width={60} height={60} />
                   </div>
+                </Fade>
+              </Link>
+              <Fade direction="right">
+                <div className="navbarlist">
+                  <a href="">Inicio</a>
+                  <a href="/contacto">Contacto</a>
                 </div>
-              </>
-              <img
-                src="/imagenes/squigly-line.png"
-                className="squigly-line"
-                width={90}
-                height={100}
-              />
-              <img
-                src="/imagenes/cube.png"
-                className="cube"
-                width={100}
-                height={100}
-              />
-              <img
-                src="/imagenes/polygon.png"
-                className="polygon"
-                width={100}
-                height={100}
-              />
+              </Fade>
+            </div>
+            <TypingEffect text="Portafolio" speed={200}></TypingEffect>
+            <div className="info">
+              <Fade direction="left">
+                <h2>Luis Ernesto Romero</h2>
+              </Fade>
+              <Fade direction="left">
+                <p>Bachiller en Administración de Empresas</p>
+              </Fade>
+
+              <Fade direction="right" className="profileImage">
+                <div className="profileDesign">
+                  <div className="backgrounProfileImage"></div>
+                  <div className="backgroundCircle"></div>
+                </div>
+              </Fade>
+
+              <Fade direction="right">
+                <img
+                  src="/imagenes/squigly-line.png"
+                  className="squigly-line"
+                  width={90}
+                  height={100}
+                />
+              </Fade>
+              <Fade direction="right">
+                <img
+                  src="/imagenes/cube.png"
+                  className="cube"
+                  width={100}
+                  height={100}
+                />
+              </Fade>
+              <Fade direction="right">
+                <img
+                  src="/imagenes/polygon.png"
+                  className="polygon"
+                  width={100}
+                  height={100}
+                />
+              </Fade>
             </div>
           </div>
         </div>
-        <>
+        <Fade direction="left">
           <div className="aboutme">
             <h2>Acerca de mí</h2>
             <p>
@@ -126,149 +150,159 @@ export default function Home() {
               innovadores.
             </p>
           </div>
-        </>
+        </Fade>
 
         <div className="formacion">
-          <>
-            <h2>Formacion Académica</h2>
-          </>
-          <>
-            <div>
-              <p id="nombreuniversidad">Universidad San Marcos (USAM)</p>
-              <p id="universidad">
-                Licenciatura en Administración de Empresas con énfasis en
-                gerencia
-              </p>
-              <p id="fecha">2023 - Actualmente</p>
-            </div>
-          </>
-          <>
-            <div>
-              <p id="nombreuniversidad">Universidad Latina de Costa Rica</p>
-              <p id="universidad">Administración de Negocios</p>
-              <p id="fecha">2021 - 2023</p>
-            </div>
-          </>
-          <>
-            <div>
-              <p id="nombreuniversidad">Universidad San Marcos (USAM)</p>
-              <p id="universidad">Técnico en Contabilidad</p>
-              <p id="fecha">2021 - Incompleto</p>
-            </div>
-          </>
-          <>
-            <div className="birrete">
-              <div id="parallelogram"></div>
-              <img
-                src="/imagenes/graduation-hat.png"
-                width={250}
-                height={250}
-                id="graduaciontHat"
-              />
-            </div>
-          </>
-        </div>
+          <div id="educacionInfo">
+            <Fade direction="left">
+              <h2>Formacion Académica</h2>
+            </Fade>
 
-        <div className="certificados">
-          <>
-            <h2>Título y Certificados</h2>
-          </>
-          <>
-            <div>
-              <p id="nombreuniversidad">
-                Centro Cultural Costarricense Norteamericano
-              </p>
-              <p id="certificadoNombre">TOEIC</p>
-              <p id="fecha">Marzo, 2023</p>
-            </div>
-          </>
-          <>
-            <div>
-              <p id="nombreuniversidad">
-                Transformación Costa Rica y Maxwell Foundation
-              </p>
-              <p id="universidad">Certificado de Habilidades Blandas</p>
-              <p id="fecha">Octubre, 2022</p>
-            </div>
-          </>
-          <>
-            <div>
-              <p id="nombreuniversidad">Fundación Carlos Slim</p>
-              <p id="universidad">Evaluador de Procesos</p>
-              <p id="fecha">Septiembre, 2022</p>
-            </div>
-          </>
-          <>
-            <div>
-              <p id="nombreuniversidad">Google Activate</p>
-              <p id="universidad">Fundamentos de Marketing Digital</p>
-              <p id="fecha">Septiembre, 2021</p>
-            </div>
-          </>
-          <>
-            <div>
-              <p id="nombreuniversidad">Fundación Carlos Slim</p>
-              <p id="universidad">Programa de educación financiera</p>
-              <p id="fecha">Septiembre, 2021</p>
-            </div>
-          </>
-          <>
-            <div>
-              <p id="nombreuniversidad">Google Analytics Academy</p>
-              <p id="universidad">Google Analytics para Principiantes</p>
-              <p id="fecha">Febrero, 2021</p>
-            </div>
-          </>
-          <>
-            <div className="birrete">
-              <div id="burst-12"></div>
-              <img
-                src="/imagenes/certificate.png"
-                width={200}
-                height={200}
-                id="certificationImage"
-              />
-            </div>
-          </>
-        </div>
+            <Fade direction="left">
+              <div className="universidadGroup">
+                <h1>Universidad San Marcos (USAM)</h1>
+                <p>
+                  Licenciatura en Administración de Empresas con énfasis en
+                  gerencia
+                </p>
+                <h3>2023 - Actualmente</h3>
+              </div>
+            </Fade>
 
-        <>
-          <div id="galeria">
-            <h2>Galeria de fotos</h2>
-            <Slider {...settings} className="sliderImage">
-              {images.map((image, index) => (
-                <div key={index} className="carousel-image">
-                  <img
-                    src={image}
-                    className="imageTitulo"
-                    alt={`Imagen ${index + 1}`}
-                  />
-                </div>
-              ))}
-            </Slider>
+            <Fade direction="left">
+              <div className="universidadGroup">
+                <h1>Universidad Latina de Costa Rica</h1>
+                <p>Administración de Negocios</p>
+                <h3>2021 - 2023</h3>
+              </div>
+            </Fade>
+
+            <Fade direction="left">
+              <div className="universidadGroup">
+                <h1>Universidad San Marcos (USAM)</h1>
+                <p>Técnico en Contabilidad</p>
+                <h3>2021 - Incompleto</h3>
+              </div>
+            </Fade>
           </div>
+          <Fade direction="right">
+            <div id="circleContainer">
+              <div id="circle">
+                <img
+                  src="/imagenes/graduation-hat.png"
+                  width={250}
+                  height={250}
+                  id="graduaciontHat"
+                />
+              </div>
+            </div>
+          </Fade>
+        </div>
+
+        <div className="formacion" id="certificado">
+          <div id="certificadoInfo">
+            <Fade direction="left">
+              <h2 id="">Diploma y certificados </h2>
+            </Fade>
+
+            <Fade direction="left">
+              <div className="universidadGroup">
+                <p id="certificadoTitulo">
+                  Centro Cultural Costarricense Norteamericano
+                </p>
+                <p id="certificadoCarrera">TOEIC</p>
+                <p id="Certificadofecha">Marzo 2023</p>
+              </div>
+            </Fade>
+
+            <Fade direction="left">
+              <div className="universidadGroup">
+                <p id="certificadoTitulo">
+                  Transformación Costa Rica y Maxwell Foundation
+                </p>
+                <p id="certificadoCarrera">Certificado de habilidades Bladas</p>
+                <p id="Certificadofecha">Octubre 2022</p>
+              </div>
+            </Fade>
+
+            <Fade direction="left">
+              <div className="universidadGroup">
+                <p id="certificadoTitulo">Fundación Carlos Slim</p>
+                <p id="certificadoCarrera">Evaluador de Procesos</p>
+                <p id="Certificadofecha">Septiembre 2022</p>
+              </div>
+            </Fade>
+            <Fade direction="left">
+              <div className="universidadGroup">
+                <p id="certificadoTitulo">Google Activate</p>
+                <p id="certificadoCarrera">Fundamentos de Marketing Digital</p>
+                <p id="Certificadofecha">Septiembre 2021</p>
+              </div>
+            </Fade>
+            <Fade direction="left">
+              <div className="universidadGroup">
+                <p id="certificadoTitulo">Google Analytics</p>
+                <p id="certificadoCarrera">
+                  Google Analytics para principiantes
+                </p>
+                <p id="Certificadofecha">Septiembre 2021</p>
+              </div>
+            </Fade>
+          </div>
+          <Fade direction="right">
+            <div id="circleContainer">
+              <div id="circleOrange">
+                <img
+                  src="/imagenes/certificate.png"
+                  width={150}
+                  height={150}
+                  id="graduaciontHat"
+                />
+              </div>
+            </div>
+          </Fade>
+        </div>
+        <>
+          <>
+            <div id="galeriaContacto">
+              <Fade direction="left">
+                <h2 id="galeriaContactoTitulo">Galeria de fotos</h2>
+              </Fade>
+              <Slider {...settings} className="sliderImageContacto">
+                {images.map((image, index) => (
+                  <div key={index} className="carousel-contacto-image">
+                    <img
+                      src={image}
+                      className="imageTituloContacto"
+                      alt={`Imagen ${index + 1}`}
+                    />
+                  </div>
+                ))}
+              </Slider>
+            </div>
+          </>
         </>
 
         <div id="experiencia">
-          <>
+          <Fade direction="left">
             <h2>Experiencia</h2>
-          </>
+          </Fade>
           <div className="experienciaContainer">
             <div className="">
-              <>
+              <Fade direction="left">
                 <p id="tituloExperiencia">
                   Voluntariado como asistente administrativo
                 </p>
-              </>
-              <>
+              </Fade>
+              <Fade direction="left">
                 <p id="experienciaCentro">
                   Centro de Educación Especial Santa Ana (CEESA)
                 </p>
-              </>
-              <>
+              </Fade>
+              <Fade direction="left">
                 <p id="experienciaFecha">Octubre 2022 - Marzo 2023</p>
-              </>
-              <>
+              </Fade>
+              <Fade direction="left">
                 <div className="listExperiencia">
                   <p>
                     • Gestionar el inventario tanto fisico como digital en
@@ -290,18 +324,18 @@ export default function Home() {
                   <p> • Realizar cotizaciones</p>
                   <p> • Gestionar archivos.</p>
                 </div>
-              </>
+              </Fade>
             </div>
-            <>
+            <Fade direction="right">
               <div id="instalaciones"></div>
-            </>
+            </Fade>
           </div>
           <div id="habilidades">
-            <>
+            <Fade direction="left">
               <h2>Habilidades duras</h2>
-            </>
+            </Fade>
             <div className="habilidadContainer">
-              <>
+              <Fade direction="left">
                 <div className="habilidadInfo">
                   <p id="habilitadTituloFinanzas">Finanzas y contabilidad </p>
                   <p>• Estado de resultados</p>
@@ -316,8 +350,8 @@ export default function Home() {
                     <BsGraphUpArrow />
                   </span>
                 </div>
-              </>
-              <>
+              </Fade>
+              <Fade direction="left">
                 <div className="habilidadInfo">
                   <p id="habilitadTituloGestion">Gestión empresarial</p>
                   <p>• Gestión de CapEx y OpEx</p>
@@ -330,8 +364,8 @@ export default function Home() {
                     <MdManageHistory />
                   </span>
                 </div>
-              </>
-              <>
+              </Fade>
+              <Fade direction="left">
                 <div className="habilidadInfo">
                   <p id="habilitadTituloSoftware">
                     Software y herramientas digitales
@@ -356,39 +390,36 @@ export default function Home() {
                     <BiSolidNetworkChart />
                   </span>
                 </div>
-              </>
+              </Fade>
             </div>
           </div>
-          <div id="idiomas">
-            <div className="idiomasContainer">
-              <>
-                <div className="idiomasBox">
-                  <h2>Idiomas</h2>
-                  <p>Inglés: Avanzado</p>
-                  <p>Escucha: B2</p>
-                  <p>Hablado: B1</p>
-                  <p>Lectura: B1</p>
-                  <p>Escritura: B2</p>
-                </div>
-              </>
-              <>
-                <div className="idiomasBox">
-                  <h2>Habilidad blandas</h2>
-                  <p>Empatía</p>
-                  <p>Trabajo en equipo</p>
-                  <p>Liderazgo</p>
-                  <p>Adaptabilidad</p>
-                  <p>Creatividad</p>
-                  <p>Innovación</p>
-                  <p>Comunicación</p>
-                </div>
-              </>
+          <Fade direction="left">
+            <div id="idiomas">
+              <div className="idiomasBox">
+                <h2>Idiomas</h2>
+                <p>Inglés: Avanzado</p>
+                <p>Escucha: B2</p>
+                <p>Hablado: B1</p>
+                <p>Lectura: B1</p>
+                <p>Escritura: B2</p>
+              </div>
+
+              <div className="idiomasBox">
+                <h2>Habilidad blandas</h2>
+                <p>Empatía</p>
+                <p>Trabajo en equipo</p>
+                <p>Liderazgo</p>
+                <p>Adaptabilidad</p>
+                <p>Creatividad</p>
+                <p>Innovación</p>
+                <p>Comunicación</p>
+              </div>
             </div>
-          </div>
+          </Fade>
           <div id="footer">
-            <>
+            <Fade direction="left">
               <p>Diseñado por: Luis Ernesto Romero</p>
-            </>
+            </Fade>
           </div>
         </div>
       </div>

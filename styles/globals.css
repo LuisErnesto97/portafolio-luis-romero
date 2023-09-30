@@ -29,7 +29,7 @@ body {
   align-items: center;
   padding-left: 20px;
   padding-right: 20px;
-  z-index: 4;
+  z-index: 8;
 }
 .navbarScroll {
   background: rgb(216, 216, 216);
@@ -42,7 +42,7 @@ body {
   align-items: center;
   padding-left: 20px;
   padding-right: 20px;
-  z-index: 4;
+  z-index: 8;
 }
 .briefCaseIcon {
   font-size: 40px;
@@ -198,19 +198,21 @@ body {
   }
 }
 /*----------------ACERCA DE MI ------------------*/
-.aboutme {
-  margin-bottom: 50px;
-}
+
 .aboutme h2 {
-  padding-top: 30px;
   font-size: 40px;
-  padding-left: 30px;
-  padding-bottom: 20px;
   letter-spacing: 2px;
+  width: 100%;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 .aboutme p {
-  padding-left: 30px;
-  width: 900px;
+  text-align: center;
+  margin-bottom: 30px;
+
+  display: flex;
+  justify-content: center;
 }
 /*---------------FORMACION ACADEMICA -------------*/
 
@@ -219,179 +221,119 @@ body {
   overflow: hidden;
   position: relative;
   padding-bottom: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
-.formacion div {
-  margin: 15px;
-}
-.formacion h2 {
-  padding-top: 30px;
+#educacionInfo h2 {
   font-size: 40px;
-  padding-left: 30px;
-  padding-bottom: 20px;
-  color: white;
   letter-spacing: 2px;
-}
-
-.formacion p {
-  padding-left: 20px;
-  width: 900px;
+  width: 100%;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
   color: white;
-  font-weight: 450;
+}
+.universidadGroup {
+  margin: 15px;
+  margin-left: 0;
+}
+.universidadGroup h1 {
   font-size: 25px;
+  width: 100%;
+  text-align: center;
+  color: white;
+  font-weight: 400;
 }
-.birrete {
-  width: 200px;
-  height: 100px;
-  position: absolute;
-  top: 60px;
-  right: 20px;
+.universidadGroup p {
+  font-size: 20px;
+  width: 100%;
+  text-align: center;
+  color: white;
+  font-weight: 200;
+  padding-left: 30px;
+  padding-right: 30px;
 }
-#parallelogram {
+.universidadGroup h3 {
+  font-size: 17px;
+  width: 100%;
+  text-align: center;
+  color: white;
+  font-weight: 300;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+#circleContainer {
+  display: flex;
+  margin-right: 30px;
+}
+#circle {
   width: 200px;
-  height: 150px;
-  transform: skew(20deg);
+  height: 200px;
   background: purple;
-  border-radius: 5px;
-  position: absolute;
-  right: 40px;
-  top: 50px;
+  border-radius: 50%;
+  position: relative;
+  margin-right: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
 }
 #graduaciontHat {
-  position: absolute;
-  top: 20px;
-  right: 20px;
+  display: flex;
+  position: relative;
+  top: 10px;
 }
+
 #nombreuniversidad {
   text-decoration: underline;
 }
 #universidad {
   font-weight: 300;
   font-size: 17px;
+  color: white;
 }
 #fecha {
   font-size: 16px;
   font-weight: 300;
+  color: white;
 }
 /*------------CERTIFICADO------------*/
-.certificados {
-  overflow: hidden;
-  position: relative;
-  padding-bottom: 30px;
+#certificado {
+  background: transparent;
 }
-.certificados div {
-  margin: 15px;
-}
-.certificados h2 {
-  padding-top: 30px;
+#certificadoInfo h2 {
   font-size: 40px;
-  padding-left: 30px;
-  padding-bottom: 20px;
-  color: black;
   letter-spacing: 2px;
+  width: 100%;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: black;
 }
-
-.certificados p {
-  padding-left: 20px;
-  width: 900px;
+#certificadoTitulo {
+  font-weight: 400;
+  color: black;
+}
+#certificadoCarrera {
+  color: black;
+  font-weight: 300;
+}
+#Certificadofecha {
   color: black;
   font-weight: 450;
-  font-size: 25px;
 }
-.birrete {
+#circleOrange {
   width: 200px;
-  height: 100px;
-  position: absolute;
-  top: 60px;
-  right: 20px;
-}
-#burst-12 {
+  height: 200px;
   background: orange;
-  width: 150px;
-  height: 150px;
+  border-radius: 50%;
   position: relative;
-  text-align: center;
-  position: relative;
-  top: 250px;
-  right: 50px;
-}
-#burst-12:before,
-#burst-12:after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 150px;
-  width: 150px;
-  background: orange;
-}
-#burst-12:before {
-  transform: rotate(30deg);
-}
-#burst-12:after {
-  transform: rotate(60deg);
-}
-
-#certificationImage {
-  position: absolute;
-  top: 240px;
-  right: 60px;
-}
-#nombreuniversidad {
-  text-decoration: underline;
-}
-#certificadoNombre {
-  font-weight: 300;
-  font-size: 17px;
-}
-#fecha {
-  font-size: 16px;
-  font-weight: 300;
-}
-/*--------------GALERIA DE FOTOS-------------*/
-#galeria {
-  position: relative;
-  overflow: hidden;
-  height: 730px;
-  background: radial-gradient(
-    circle,
-    rgba(209, 206, 207, 1) 0%,
-    rgba(221, 230, 241, 1) 100%
-  );
-}
-.sliderImage {
-  width: auto;
-  height: auto;
-  margin-top: 30px;
+  margin-right: 30px;
   display: flex;
   align-items: center;
   justify-content: center;
-}
-#galeria h2 {
-  padding-left: 30px;
-  padding-top: 20px;
-  font-weight: 300;
-}
-.imageTituloContainer {
-  margin: 10px;
-  height: 400px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px,
-    rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
-}
-.carousel-image {
-  width: 100%;
-  display: flex;
-  justify-content: center; /* Center horizontally */
-  align-items: center; /* Center vertically */
-  height: 100%; /* Ensure the container takes the full height */
-}
-.imageTitulo {
   margin: 0 auto;
-  box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px,
-    rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
 }
 
 /*---------EXPERIENCIA CONTAINER -------------*/
@@ -442,19 +384,24 @@ body {
 #habilidades {
   background: black;
   margin-top: 50px;
+  padding-bottom: 30px;
 }
 #habilidades h2 {
   color: white;
   padding-left: 20px;
   padding-top: 20px;
+  padding-bottom: 20px;
 }
 .habilidadContainer {
   display: flex;
   justify-content: space-between;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 .habilidadInfo {
   width: 400px;
-  margin: 30px;
+  height: 450px;
+  padding-top: 5px;
   padding-bottom: 20px;
   position: relative;
   background: radial-gradient(
@@ -521,24 +468,25 @@ body {
 
 /*----------IDIOMAS------------*/
 #idiomas {
-  margin-top: 60px;
-}
-.idiomasContainer {
+  width: 100%;
   display: flex;
-  justify-content: center;
 }
-.idiomasContainer div {
-  margin: 80px;
-  margin-top: 0;
+
+.idiomasBox {
+  margin: 60px;
+  border: 2px solid black;
+  border-radius: 5px;
+  width: 50%;
 }
 .idiomasBox h2 {
-  text-decoration: underline;
   text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 .idiomasBox p {
-  padding-left: 30px;
-  font-size: 20px;
+  font-size: 17px;
   text-align: center;
+  margin-bottom: 10px;
 }
 
 /*-------FOOTER----------*/
@@ -553,4 +501,380 @@ body {
 #footer p {
   font-size: 20px;
   display: flex;
+  letter-spacing: 2px;
+  text-align: center;
+}
+@media screen and (max-width: 1215px) {
+  /*-------NAVBAR-----------*/
+  .navbarlist a {
+    font-size: 15px;
+  }
+  .navbarScroll .navbarlist a {
+    font-size: 15px;
+  }
+  .background {
+    background: url(/imagenes/background-portafolio.png);
+    width: 100%;
+    height: 450px;
+    background-size: cover;
+    position: relative;
+  }
+  .info h2 {
+    color: white;
+    font-size: 20px;
+    font-weight: 300;
+    position: relative;
+    left: 0;
+    right: 0;
+    letter-spacing: 3px;
+    text-align: center;
+    z-index: 5;
+    top: 160px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .info p {
+    font-size: 20px;
+    position: absolute;
+    text-align: center;
+    top: 210px;
+    color: white;
+    font-weight: 200;
+    width: 100%;
+    z-index: 5;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .profileImage {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 210px;
+    margin-left: auto;
+    margin-right: auto;
+    bottom: 0px;
+    width: auto;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .profileDesign {
+    width: 300px;
+    height: 150px;
+    display: flex;
+    position: relative;
+    justify-content: center;
+  }
+  .backgrounProfileImage {
+    background: url(/imagenes/fotoperfil.jpg);
+    width: 150px;
+    height: 150px;
+    background-size: cover;
+    border-radius: 50%;
+    display: flex;
+    z-index: 5;
+  }
+  .backgroundCircle {
+    background: rgba(0, 0, 0, 0.5);
+    width: 150px;
+    border: 2px solid white;
+    height: 150px;
+    border-radius: 50%;
+    display: flex;
+    z-index: 5;
+  }
+
+  .cube {
+    position: absolute;
+    right: 0px;
+    top: 300px;
+    z-index: 1;
+    animation: cube 2.5s linear infinite;
+    width: 70px;
+    height: 70px;
+  }
+
+  .squigly-line {
+    position: absolute;
+    right: 40px;
+    top: 20px;
+    z-index: 1;
+    animation: squigly 2.5s linear infinite;
+    width: 60px;
+    height: 70px;
+  }
+  .polygon {
+    position: absolute;
+    left: 0px;
+    top: 250px;
+    z-index: 1;
+    animation: cube 2.5s linear infinite;
+    width: 70px;
+    height: 70px;
+  }
+  /*-------ABOUT ME --------*/
+
+  .aboutme h2 {
+    padding-top: 10px;
+    font-size: 20px;
+    padding-bottom: 10px;
+    letter-spacing: 2px;
+    text-align: center;
+  }
+  .aboutme p {
+    padding-left: 20px;
+    width: 100%;
+    padding-right: 20px;
+    font-size: 12px;
+    text-align: center;
+  }
+
+  /*-------FORMACIÓN ACADEMICA---------*/
+
+  .formacion {
+    background: black;
+    overflow: hidden;
+    position: relative;
+    padding-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+  }
+  #educacionInfo h2 {
+    font-size: 20px;
+    letter-spacing: 2px;
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: white;
+  }
+  .universidadGroup h1 {
+    font-size: 20px;
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-weight: 400;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .universidadGroup p {
+    font-size: 15px;
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-weight: 200;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .universidadGroup h3 {
+    font-size: 15px;
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-weight: 300;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  #circleContainer {
+    display: flex;
+    margin-right: 0px;
+  }
+  /*--------CERTIFICADO----*/
+  #certificadoInfo h2 {
+    font-size: 20px;
+    letter-spacing: 2px;
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: black;
+  }
+
+  /*--------GALERIA DE FOTOS---------*/
+  #galeria {
+    position: relative;
+    overflow: hidden;
+    height: auto;
+    background: radial-gradient(
+      circle,
+      rgba(209, 206, 207, 1) 0%,
+      rgba(221, 230, 241, 1) 100%
+    );
+  }
+  .imageTitulo {
+    margin: 0 auto;
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px,
+      rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
+    width: 100%;
+  }
+
+  /*---------EXPERIENCIA CONTAINER -------------*/
+  #experiencia {
+    margin-top: 30px;
+  }
+  #experiencia h2 {
+    padding-left: 0px;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-align: center;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  #tituloExperiencia {
+    font-size: 17px;
+    padding-left: 0px;
+    margin-top: 20px;
+    text-align: center;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  #experienciaCentro {
+    font-size: 16px;
+    font-weight: 300;
+    padding-left: 0px;
+    text-align: center;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  #experienciaFecha {
+    padding-left: 0px;
+    text-align: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 15px;
+  }
+  .experienciaContainer {
+    display: flex;
+    flex-direction: column;
+  }
+  .listExperiencia {
+    width: 100%;
+    text-align: left;
+    margin: 30px auto;
+    line-height: 2;
+    text-align: center;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  #instalaciones {
+    background-image: url("/imagenes/Instalaciones.JPG");
+    background-size: cover;
+    width: 95%;
+    height: 500px;
+    margin: 30px auto;
+
+    border: 3px solid white;
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px,
+      rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
+  }
+
+  /*----------HABILIDAD CONTAINER-------------*/
+  .habilidadContainer {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .habilidadInfo {
+    margin: 20px auto;
+    width: 100%;
+  }
+  .habilidadInfo p {
+    font-size: 13px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  #habilitadTituloFinanzas {
+    font-size: 17px;
+    color: white;
+    background: orange;
+    margin: 10px;
+    padding: 5px;
+    text-align: center;
+    border-radius: 5px;
+  }
+  #habilitadTituloGestion {
+    font-size: 17px;
+    color: white;
+    background: rgb(114, 114, 219);
+    margin: 10px;
+    padding: 5px;
+    text-align: center;
+    border-radius: 5px;
+  }
+  #habilitadTituloSoftware {
+    font-size: 17px;
+    color: white;
+    background: rgb(48, 131, 199);
+    margin: 10px;
+    padding: 5px;
+    text-align: center;
+    border-radius: 5px;
+  }
+
+  /*-----------IDIOMAS CONTAINER -----------*/
+  #idiomas {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .idiomasBox {
+    margin: 20px auto;
+    border: 2px solid black;
+    border-radius: 5px;
+    width: 90%;
+  }
+  .idiomasBox h2 {
+    font-size: 20px;
+  }
+
+  /*---------FOOTER------*/
+  #footer p {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 297px) {
+  .info h2 {
+    color: white;
+    font-size: 15px;
+    font-weight: 300;
+    position: relative;
+    left: 0;
+    right: 0;
+    letter-spacing: 3px;
+    text-align: center;
+    z-index: 5;
+    top: 160px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .info p {
+    font-size: 15px;
+    position: absolute;
+    text-align: center;
+    top: 210px;
+    color: white;
+    font-weight: 200;
+    width: 100%;
+    z-index: 5;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  /*-------ABOUT ME --------*/
+
+  .aboutme h2 {
+    font-size: 20px;
+  }
+  .aboutme p {
+    font-size: 10px;
+  }
 }

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Fade } from "react-awesome-reveal";
 
 const TypingEffect = ({ text, speed }) => {
   const [displayText, setDisplayText] = useState("");
@@ -19,7 +20,13 @@ const TypingEffect = ({ text, speed }) => {
     return () => clearInterval(interval);
   }, [currentIndex, text, speed]);
 
-  return <div className="typing">{displayText}</div>;
+  return (
+    <>
+      <Fade direction="left">
+        <div className="typing">{displayText}</div>
+      </Fade>
+    </>
+  );
 };
 
 export default TypingEffect;

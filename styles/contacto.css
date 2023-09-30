@@ -1,12 +1,12 @@
-#contactoTitle {
-  font-size: 50px;
+.contactoInfo {
   padding-left: 30px;
+}
+.contactoInfo h2 {
+  font-size: 50px;
   padding-top: 120px;
 }
-.contactoContainer p {
-  padding-left: 30px;
+.contactoInfo p {
   font-size: 17px;
-  margin: 5px;
 }
 #galeriaContacto {
   position: relative;
@@ -19,8 +19,8 @@
   padding-bottom: 50px;
 }
 #galeriaContactoTitulo {
+  text-align: center;
   padding-top: 20px;
-  padding-left: 30px;
 }
 #galeriaContacto h2 {
   font-size: 30px;
@@ -45,4 +45,23 @@
   margin: 0 auto;
   box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px,
     rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
+}
+@media screen and (max-width: 1215px) {
+  .contactoInfo h2 {
+    font-size: 20px;
+    padding-top: 120px;
+  }
+  .contactoInfo p {
+    font-size: 15px;
+  }
+  #galeriaContacto h2 {
+    font-size: 20px;
+    font-weight: 300;
+  }
+  .imageTituloContacto {
+    margin: 0 auto;
+    width: 100%;
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px,
+      rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
+  }
 }

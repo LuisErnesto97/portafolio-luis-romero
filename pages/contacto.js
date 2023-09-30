@@ -4,6 +4,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Link from "next/link";
+import { Fade } from "react-awesome-reveal";
 
 const contacto = () => {
   const [color, setColor] = useState(false);
@@ -54,36 +55,43 @@ const contacto = () => {
       </Head>
       <div className="contactoContainer">
         <div className="navbarScroll">
-          <>
+          <Fade direction="left">
             <Link href="/">
               <div className="briefCaseIcon">
                 <img src="/imagenes/briefcase.png" width={60} height={60} />
               </div>
             </Link>
-          </>
-          <div className="navbarlist">
-            <a href="/">Inicio</a>
-            <a href="/contacto">Contacto</a>
-          </div>
+          </Fade>
+          <Fade direction="right">
+            <div className="navbarlist">
+              <a href="/">Inicio</a>
+              <a href="/contacto">Contacto</a>
+            </div>
+          </Fade>
+        </div>
+        <div className="contactoInfo">
+          <Fade direction="left">
+            <h2>Contacto</h2>
+          </Fade>
+          <Fade direction="left">
+            <p>Celular: +506 7129-3487</p>
+          </Fade>
+          <Fade direction="left">
+            {" "}
+            <p>Correo electrónico: eespinal288@gmail.com</p>
+          </Fade>
+          <Fade direction="left">
+            <p>
+              Dirección: Calle La Cubilla, Pozos de Santa Ana, San José Costa
+              Rica
+            </p>
+          </Fade>
         </div>
         <>
-          <h2 id="contactoTitle">Contacto</h2>
-        </>
-        <>
-          <p>Celular: +506 7129-3487</p>
-        </>
-        <>
-          {" "}
-          <p>Correo electrónico: eespinal288@gmail.com</p>
-        </>
-        <>
-          <p>
-            Dirección: Calle La Cubilla, Pozos de Santa Ana, San José Costa Rica
-          </p>
-        </>
-        <>
           <div id="galeriaContacto">
-            <h2 id="galeriaContactoTitulo">Cartas de recomendación</h2>
+            <Fade direction="left">
+              <h2 id="galeriaContactoTitulo">Cartas de recomendación</h2>
+            </Fade>
             <Slider {...settings} className="sliderImageContacto">
               {images.map((image, index) => (
                 <div key={index} className="carousel-contacto-image">
@@ -98,9 +106,9 @@ const contacto = () => {
           </div>
         </>
         <div id="footer">
-          <>
+          <Fade direction="left">
             <p>Diseñado por: Luis Ernesto Romero</p>
-          </>
+          </Fade>
         </div>
       </div>
     </div>

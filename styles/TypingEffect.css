@@ -6,4 +6,20 @@
   position: absolute;
   top: 100px;
   padding-left: 30px;
+  z-index: 5;
+}
+@media screen and (max-width: 1215px) {
+  .typing {
+    font-size: 30px;
+    font-weight: 400;
+    text-align: center;
+    padding-left: 0;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    margin-bottom: 0;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 }
