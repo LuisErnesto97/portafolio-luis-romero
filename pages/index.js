@@ -344,8 +344,9 @@ export default function Home() {
                   <p>• Estado de cambios en el patrimonio</p>
                   <p>• Estado de valor añadido</p>
                   <p>• KPIs financieros</p>
+                  <p>• Presupuestación y costo de capital</p>
+                  <p>• Conciliaciones bancarias</p>
                   <p>• Proyecciones financieras</p>
-                  <p>• Proyecciones de inversión</p>
                   <span id="graphic">
                     <BsGraphUpArrow />
                   </span>
@@ -359,7 +360,6 @@ export default function Home() {
                   <p>• Metodología Kanban</p>
                   <p>• Balance Scorecard (BSC)</p>
                   <p>• Despliegue de la función de calidad (QFD)</p>
-
                   <span id="IconGestion">
                     <MdManageHistory />
                   </span>
