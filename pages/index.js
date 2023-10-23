@@ -345,7 +345,6 @@ export default function Home() {
                   <p>• Estado de valor añadido</p>
                   <p>• KPIs financieros</p>
                   <p>• Presupuestación y costo de capital</p>
-                  <p>• Conciliaciones bancarias</p>
                   <p>• Proyecciones financieras</p>
                   <span id="graphic">
                     <BsGraphUpArrow />
@@ -360,6 +359,7 @@ export default function Home() {
                   <p>• Metodología Kanban</p>
                   <p>• Balance Scorecard (BSC)</p>
                   <p>• Despliegue de la función de calidad (QFD)</p>
+                  <p>• Mezcla de mercadeo</p>
                   <span id="IconGestion">
                     <MdManageHistory />
                   </span>
@@ -379,10 +379,11 @@ export default function Home() {
                     OneDrive, Excel (Tablas dinámicas, gráficos dinámicos,
                     segmentación de datos)
                   </p>
-                  <p>• Trello </p>
+                  <p>• Trello - Software para la gestión de proyectos</p>
                   <p>• Google Analytics </p>
                   <p>• Google Workspace</p>
-                  <p>• Firebase </p>
+                  <p>• Firestore Database</p>
+                  <p>• Plataforma de computación en la nube - Firebase</p>
                   <p>• Power BI</p>
                   <p>• Lenguajes de programación (HTML, CSS, Javascript)</p>
 
