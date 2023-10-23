@@ -82,8 +82,8 @@ const contacto = () => {
           </Fade>
           <Fade direction="left">
             <p>
-              Dirección: Calle La Cubilla, Pozos de Santa Ana, San José Costa
-              Rica
+              Dirección: : Norte de Enertec CR, Avenida 24, entre calles 17 y
+              19A, San José, Costa Rica.
             </p>
           </Fade>
         </div>
